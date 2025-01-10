@@ -9,11 +9,13 @@ console.log(cleanNames);
 /*****************************/
 /* //2// */
 var  miles = [10, 20, 30, 40];
-function km(array){
-    return array.map(miles=>miles*1.60934)
-
+function convert(miles){
+    var km= miles.map(miles=>miles*1.60934)
+    console.log(km)
+  var totalDistanceInKilometers=km.reduce((sum,km)=>sum+km,0)
+  return totalDistanceInKilometers
 }
-console.log(km(miles))
+ console.log(convert(miles))
 
 /*****************************/
 /* //3// */
@@ -35,6 +37,12 @@ console.log(element(numbers))
 
 /*****************************/
 /* //5// */
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var evenDoubleEven=numbers
+.filter(num=>num%2===0)
+.map(num=>num*2)
+.reduce((acc,num)=>acc+num);
+console.log(evenDoubleEven)
 
 /*****************************/
 /* //6// */
@@ -87,6 +95,14 @@ console.log(sumSquaredDivisibleBy5)
 
 /*****************************/
 /* //10// */
+var nums = [11, 22, 33, 46, 75, 86, 97, 98];
+var squaredEvenNums=nums
+.filter(num=>num %2===0)
+.map(num=>num*num)
+var sum=nums.reduce((acc,num)=>acc+num,0)
+
+console.log(squaredEvenNums)
+console.log(sum)
 
 /*****************************/
 /* //11// */
