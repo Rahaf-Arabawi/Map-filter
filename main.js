@@ -58,13 +58,13 @@ var heros = [
     {name: 'Thor', power: 'Godly powers'},
     {name: 'Hulk', power: 'Super strength'}
     ]
-    var newHerso=heros.map((hero,index) =>{
-        return{
+    var newHerso=heros.map((hero,index) =>({
+        
           hero:hero.name,
           power:hero.power,
           id:index
-        }
-    })
+        
+    }))
     console.log(newHerso)
 
 /*****************************/
@@ -107,9 +107,7 @@ console.log(sum)
 /*****************************/
 /* //11// */
 var countries = ['India', 'United States', 'Russia', 'Japan', 'China'];
-var filteredCountries=countries.filter(countries=>{
-    return !(countries.startsWith('U')|| countries.startsWith('R'))
-});
+var filteredCountries=countries.filter(countries=>!countries.startsWith('U')|| countries.startsWith('R'))
 var upperCaseCountries=filteredCountries.map(countries=>countries.toUpperCase())
 var totalCharacters=upperCaseCountries.reduce((acc,countries)=>acc+countries.length,0)
 
